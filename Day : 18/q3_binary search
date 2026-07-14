@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int arr[] = {11, 12, 22, 25, 64}, n = 5, target = 22;
+    int low = 0, high = n - 1, found = -1;
+    while(low <= high) {
+        int mid = low + (high - low) / 2;
+        if(arr[mid] == target) { found = mid; break; }
+        if(arr[mid] < target) low = mid + 1;
+        else high = mid - 1;
+    }
+    if(found != -1) printf("Element found at index %d", found);
+    else printf("Element not found");
+    return 0;
+}
