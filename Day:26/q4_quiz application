@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    int ans, score = 0;
+    printf("Q1. What is the size of int in C (typically)?\n1. 2 bytes\n2. 4 bytes\nEnter answer (1-2): ");
+    scanf("%d", &ans);
+    if (ans == 2) score++;
+    printf("Your score: %d/1\n", score);
+    return 0;
+}
