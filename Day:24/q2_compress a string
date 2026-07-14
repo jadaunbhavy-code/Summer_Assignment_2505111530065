@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    char str[] = "aaabbc", res[50];
+    int i = 0, j = 0;
+    while(str[i] != '\0') {
+        int count = 1;
+        while(str[i] == str[i+1]) { count++; i++; }
+        res[j++] = str[i];
+        res[j++] = count + '0';
+        i++;
+    }
+    res[j] = '\0';
+    printf("Compressed: %s", res);
+    return 0;
+}
