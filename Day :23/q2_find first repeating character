@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    char str[] = "swiss";
+    int freq[256] = {0};
+    for(int i = 0; str[i] != '\0'; i++) {
+        if(freq[(unsigned char)str[i]] == 1) {
+            printf("First repeating character: %c", str[i]);
+            return 0;
+        }
+        freq[(unsigned char)str[i]]++;
+    }
+    printf("None found");
+    return 0;
+}
