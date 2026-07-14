@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    char str[] = "h e l l o", res[20];
+    int j = 0;
+    for(int i = 0; str[i] != '\0'; i++) {
+        if(str[i] != ' ') res[j++] = str[i];
+    }
+    res[j] = '\0';
+    printf("Without spaces: %s", res);
+    return 0;
+}
