@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <limits.h>
+
+int main() {
+    int arr[] = {12, 35, 1, 10, 34, 1}, n = 6;
+    int max = INT_MIN, secMax = INT_MIN;
+    
+    for (int i = 0; i < n; i++) {
+        if (arr[i] > max) {
+            secMax = max;
+            max = arr[i];
+        } else if (arr[i] > secMax && arr[i] != max) {
+            secMax = arr[i];
+        }
+    }
+    printf("Second Largest: %d\n", secMax);
+    return 0;
+}
