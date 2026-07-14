@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    char str[] = "Find the longest word here", maxW[20], current[20];
+    int i = 0, j = 0, maxLen = 0;
+    while(1) {
+        if(str[i] == ' ' || str[i] == '\0') {
+            current[j] = '\0';
+            if(j > maxLen) { maxLen = j; for(int k=0; k<=j; k++) maxW[k] = current[k]; }
+            j = 0;
+            if(str[i] == '\0') break;
+        } else current[j++] = str[i];
+        i++;
+    }
+    printf("Longest word: %s", maxW);
+    return 0;
+}
