@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    char s1[] = "listen", s2[] = "silent";
+    int f1[256] = {0}, f2[256] = {0}, anagram = 1;
+    for(int i = 0; s1[i] != '\0'; i++) f1[(unsigned char)s1[i]]++;
+    for(int i = 0; s2[i] != '\0'; i++) f2[(unsigned char)s2[i]]++;
+    for(int i = 0; i < 256; i++) {
+        if(f1[i] != f2[i]) { anagram = 0; break; }
+    }
+    if(anagram) printf("Anagrams");
+    else printf("Not Anagrams");
+    return 0;
+}
