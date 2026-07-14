@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    char str[] = "programming", res[20];
+    int freq[256] = {0}, j = 0;
+    for(int i = 0; str[i] != '\0'; i++) {
+        if(freq[(unsigned char)str[i]] == 0) {
+            res[j++] = str[i];
+            freq[(unsigned char)str[i]] = 1;
+        }
+    }
+    res[j] = '\0';
+    printf("Unique string: %s", res);
+    return 0;
+}
